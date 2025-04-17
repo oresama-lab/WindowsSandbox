@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <LogonCommand>
+        <Command>cmd /S /C "start powershell -c "$progressPreference='silentlyContinue';Write-Host "Installing WinGet PowerShell module from PSGallery...";Install-PackageProvider -Name NuGet -Force | Out-Null;Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null;Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet...";Repair-WinGetPackageManager;Write-Host "Done."; winget install -e --accept-package-agreements --id Tailscale.Tailscale; winget install -e --accept-package-agreements --id Microsoft.OpenSSH.Preview; winget install -e --accept-package-agreements --id TeraTermProject.teraterm5; pause"</Command>
+    </LogonCommand>
+</Configuration>
